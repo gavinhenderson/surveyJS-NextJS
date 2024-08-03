@@ -1,0 +1,28 @@
+
+
+.main {
+    padding-top: 1rem;
+    background: #f7f7f7;
+    padding-bottom: 1rem;
+    height: 100%;
+}
+
+.surveyList {
+    margin-top: 2rem;
+}
+
+.button {
+    border-radius: 6px;
+    background: #212D40;
+    color: white;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.57);
+}
+
+.pageContainer {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-top: 1rem;
+}

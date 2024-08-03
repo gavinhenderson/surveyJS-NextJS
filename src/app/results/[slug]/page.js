@@ -32,7 +32,11 @@ export default function Page({ params: { slug } }) {
     }
 
     return () => {
-      document.getElementById("surveyVizPanel").innerHTML = "";
+      const panelElement = document.getElementById("surveyVizPanel");
+
+      if (panelElement) {
+        panelElement.innerHTML = "";
+      }
     };
   }, [vizPanel]);
 

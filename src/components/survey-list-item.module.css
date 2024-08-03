@@ -1,0 +1,19 @@
+.itemContainer {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 4px;
+    border: 1px grey solid;
+    margin: 8px 0;
+    padding: 0 8px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.itemContainer > p {
+    flex-grow: 1;
+}
+
+.itemContainer > a {
+    color: black;
+}

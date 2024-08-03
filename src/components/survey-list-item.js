@@ -1,19 +1,16 @@
 import Link from "next/link";
 
+import styles from "./survey-list-item.module.css";
+
 export const SurveyListItem = ({ survey }) => {
   return (
-    <div>
+    <div className={styles.itemContainer}>
       <p>{survey.survey.title}</p>
-      <ul>
-        <li>
-          <Link href={`/form/${survey.slug}`}>Fill out form</Link>
-        </li>
-        {survey.results.length > 0 && (
-          <li>
-            <Link href={`/results/${survey.slug}`}>Results</Link>
-          </li>
-        )}
-      </ul>
+
+      {survey.results.length > 0 && (
+        <Link href={`/results/${survey.slug}`}>View Results</Link>
+      )}
+      <Link href={`/form/${survey.slug}`}>Fill out form</Link>
     </div>
   );
 };

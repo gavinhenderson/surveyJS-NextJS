@@ -7,11 +7,11 @@ import { pizza } from "./pizza";
 import { productFeedback } from "./product-feedback";
 
 export const surveys = [
-    nps,
-    cancellation,
-    productFeedback,
-    medical,
-    pizza,
-    patient,
-    job
-]
+  nps,
+  cancellation,
+  productFeedback,
+  medical,
+  pizza,
+  patient,
+  job,
+];

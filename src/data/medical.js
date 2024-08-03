@@ -1,256 +1,257 @@
+export const medicalResults = [];
+
 export const medical = {
-    "title": "Patient Past Medical, Social & Family History",
-    "pages": [
+  slug: "medical",
+  results: [],
+  survey: {
+    title: "Patient Past Medical, Social & Family History",
+    pages: [
       {
-        "name": "introduction",
-        "title": "Introduction",
-        "elements": [
+        name: "introduction",
+        title: "Introduction",
+        elements: [
           {
-            "type": "panel",
-            "name": "patienName",
-            "questionTitleLocation": "bottom",
-            "title": "Patient Name",
-            "elements": [
+            type: "panel",
+            name: "patienName",
+            questionTitleLocation: "bottom",
+            title: "Patient Name",
+            elements: [
               {
-                "type": "text",
-                "name": "patientLastName",
-                "title": "(Last)",
-                "isRequired": true
+                type: "text",
+                name: "patientLastName",
+                title: "(Last)",
+                isRequired: true,
               },
               {
-                "type": "text",
-                "name": "patienFirstName",
-                "startWithNewLine": false,
-                "title": "(First)",
-                "isRequired": true
+                type: "text",
+                name: "patienFirstName",
+                startWithNewLine: false,
+                title: "(First)",
+                isRequired: true,
               },
               {
-                "type": "text",
-                "name": "patientMiddleName",
-                "title": "(M.I)"
-              }
-            ]
+                type: "text",
+                name: "patientMiddleName",
+                title: "(M.I)",
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "panel2",
-            "questionTitleLocation": "left",
-            "title": "Social Security & Birth Date",
-            "elements": [
+            type: "panel",
+            name: "panel2",
+            questionTitleLocation: "left",
+            title: "Social Security & Birth Date",
+            elements: [
               {
-                "type": "text",
-                "name": "socialsecurity",
-                "title": "Social Security #:",
-                "isRequired": true
+                type: "text",
+                name: "socialsecurity",
+                title: "Social Security #:",
+                isRequired: true,
               },
               {
-                "type": "text",
-                "name": "birthDate",
-                "startWithNewLine": false,
-                "title": "Date of birth:",
-                "isRequired": true,
-                "inputType": "date"
+                type: "text",
+                name: "birthDate",
+                startWithNewLine: false,
+                title: "Date of birth:",
+                isRequired: true,
+                inputType: "date",
               },
               {
-                "type": "radiogroup",
-                "name": "sex",
-                "title": "Sex:",
-                "isRequired": true,
-                "choices": [
+                type: "radiogroup",
+                name: "sex",
+                title: "Sex:",
+                isRequired: true,
+                choices: [
                   {
-                    "value": "male",
-                    "text": "Male"
+                    value: "male",
+                    text: "Male",
                   },
                   {
-                    "value": "female",
-                    "text": "Female"
-                  }
+                    value: "female",
+                    text: "Female",
+                  },
                 ],
-                "colCount": 0
-              }
-            ]
+                colCount: 0,
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "panel1",
-            "title": "Completed By",
-            "elements": [
+            type: "panel",
+            name: "panel1",
+            title: "Completed By",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "completedBy",
-                "title": "Who completed this form:",
-                "isRequired": true,
-                "choices": [
+                type: "radiogroup",
+                name: "completedBy",
+                title: "Who completed this form:",
+                isRequired: true,
+                choices: [
                   {
-                    "value": "patient",
-                    "text": "Patient"
+                    value: "patient",
+                    text: "Patient",
                   },
                   {
-                    "value": "spouse",
-                    "text": "Spouse"
-                  }
+                    value: "spouse",
+                    text: "Spouse",
+                  },
                 ],
-                "showOtherItem": true,
-                "otherText": "Other (specify)",
-                "colCount": 0
+                showOtherItem: true,
+                otherText: "Other (specify)",
+                colCount: 0,
               },
               {
-                "type": "text",
-                "name": "completedByOtherName",
-                "visibleIf": "{completedBy} != \"patient\"",
-                "startWithNewLine": false,
-                "title": "Name (if other than patient):",
-                "isRequired": true
-              }
-            ]
-          }
-        ]
+                type: "text",
+                name: "completedByOtherName",
+                visibleIf: '{completedBy} != "patient"',
+                startWithNewLine: false,
+                title: "Name (if other than patient):",
+                isRequired: true,
+              },
+            ],
+          },
+        ],
       },
       {
-        "name": "medicalHistory",
-        "questionTitleLocation": "left",
-        "title": "Past Medical History",
-        "elements": [
+        name: "medicalHistory",
+        questionTitleLocation: "left",
+        title: "Past Medical History",
+        elements: [
           {
-            "type": "radiogroup",
-            "name": "everhospitalized",
-            "title": "Have you ever been hospitalized?",
-            "isRequired": true,
-            "choices": [
+            type: "radiogroup",
+            name: "everhospitalized",
+            title: "Have you ever been hospitalized?",
+            isRequired: true,
+            choices: [
               {
-                "value": "no",
-                "text": "No"
+                value: "no",
+                text: "No",
               },
               {
-                "value": "yes",
-                "text": "Yes"
-              }
+                value: "yes",
+                text: "Yes",
+              },
             ],
-            "colCount": 0
+            colCount: 0,
           },
           {
-            "type": "radiogroup",
-            "name": "injuriesbrokenbones",
-            "title": "Have you had any serious injuries and/or broken bones?",
-            "isRequired": true,
-            "choices": [
+            type: "radiogroup",
+            name: "injuriesbrokenbones",
+            title: "Have you had any serious injuries and/or broken bones?",
+            isRequired: true,
+            choices: [
               {
-                "value": "no",
-                "text": "No"
+                value: "no",
+                text: "No",
               },
               {
-                "value": "yes",
-                "text": "Yes"
-              }
+                value: "yes",
+                text: "Yes",
+              },
             ],
-            "colCount": 0
+            colCount: 0,
           },
           {
-            "type": "comment",
-            "name": "injuriesbrokenbones_describe",
-            "visible": false,
-            "visibleIf": "{injuriesbrokenbones} = \"yes\"",
-            "startWithNewLine": false,
-            "title": "Describe",
-            "isRequired": true
+            type: "comment",
+            name: "injuriesbrokenbones_describe",
+            visible: false,
+            visibleIf: '{injuriesbrokenbones} = "yes"',
+            startWithNewLine: false,
+            title: "Describe",
+            isRequired: true,
           },
           {
-            "type": "radiogroup",
-            "name": "bloodtransfusion",
-            "title": "Have you ever received a blood transfusion?",
-            "isRequired": true,
-            "choices": [
+            type: "radiogroup",
+            name: "bloodtransfusion",
+            title: "Have you ever received a blood transfusion?",
+            isRequired: true,
+            choices: [
               {
-                "value": "unknown",
-                "text": "Unknown"
+                value: "unknown",
+                text: "Unknown",
               },
               {
-                "value": "no",
-                "text": "No"
+                value: "no",
+                text: "No",
               },
               {
-                "value": "yes",
-                "text": "Yes"
-              }
+                value: "yes",
+                text: "Yes",
+              },
             ],
-            "colCount": 0
+            colCount: 0,
           },
           {
-            "type": "text",
-            "name": "bloodtransfusion_years",
-            "visible": false,
-            "visibleIf": "{bloodtransfusion}=\"yes\"",
-            "startWithNewLine": false,
-            "title": "Approximate year(s)"
+            type: "text",
+            name: "bloodtransfusion_years",
+            visible: false,
+            visibleIf: '{bloodtransfusion}="yes"',
+            startWithNewLine: false,
+            title: "Approximate year(s)",
           },
           {
-            "type": "radiogroup",
-            "name": "ousideUSACanada",
-            "title": "Have you ever traveled or lived outside the United States or Canada?",
-            "isRequired": true,
-            "choices": [
+            type: "radiogroup",
+            name: "ousideUSACanada",
+            title:
+              "Have you ever traveled or lived outside the United States or Canada?",
+            isRequired: true,
+            choices: [
               {
-                "value": "no",
-                "text": "No"
+                value: "no",
+                text: "No",
               },
               {
-                "value": "yes",
-                "text": "Yes"
-              }
+                value: "yes",
+                text: "Yes",
+              },
             ],
-            "colCount": 0
+            colCount: 0,
           },
           {
-            "type": "comment",
-            "name": "ousideUSACanada_describe",
-            "visible": false,
-            "visibleIf": "{ousideUSACanada} = \"yes\"",
-            "startWithNewLine": false,
-            "title": "Describe",
-            "isRequired": true
+            type: "comment",
+            name: "ousideUSACanada_describe",
+            visible: false,
+            visibleIf: '{ousideUSACanada} = "yes"',
+            startWithNewLine: false,
+            title: "Describe",
+            isRequired: true,
           },
           {
-            "type": "matrixdropdown",
-            "name": "immunizations",
-            "title": "Have you received the following IMMUNIZATIONS?  If yes, indicate the approximate year it was last given:",
-            "titleLocation": "top",
-            "columns": [
+            type: "matrixdropdown",
+            name: "immunizations",
+            title:
+              "Have you received the following IMMUNIZATIONS?  If yes, indicate the approximate year it was last given:",
+            titleLocation: "top",
+            columns: [
               {
-                "name": "answer",
-                "title": "Please select",
-                "cellType": "radiogroup",
-                "isRequired": true,
-                "choices": [
+                name: "answer",
+                title: "Please select",
+                cellType: "radiogroup",
+                isRequired: true,
+                choices: [
                   {
-                    "value": "unknown",
-                    "text": "Unknown"
+                    value: "unknown",
+                    text: "Unknown",
                   },
                   {
-                    "value": "no",
-                    "text": "No"
+                    value: "no",
+                    text: "No",
                   },
                   {
-                    "value": "yes",
-                    "text": "Yes"
-                  }
-                ]
+                    value: "yes",
+                    text: "Yes",
+                  },
+                ],
               },
               {
-                "name": "year",
-                "title": "Year",
-                "cellType": "text",
-                "isRequired": true,
-                "visibleIf": "{row.answer} = \"yes\""
-              }
+                name: "year",
+                title: "Year",
+                cellType: "text",
+                isRequired: true,
+                visibleIf: '{row.answer} = "yes"',
+              },
             ],
-            "choices": [
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "rows": [
+            choices: [1, 2, 3, 4, 5],
+            rows: [
               "Pneumococcal (for pneumonia)",
               "Hepatitis A",
               "Hepatitis B",
@@ -259,20 +260,20 @@ export const medical = {
               "Measles",
               "Mumps",
               "Rubella",
-              "Polio"
-            ]
+              "Polio",
+            ],
           },
           {
-            "type": "matrixdynamic",
-            "name": "problems1",
-            "title": "Have you ever had any of the following?",
-            "titleLocation": "top",
-            "columns": [
+            type: "matrixdynamic",
+            name: "problems1",
+            title: "Have you ever had any of the following?",
+            titleLocation: "top",
+            columns: [
               {
-                "name": "problem",
-                "title": "Problem",
-                "cellType": "dropdown",
-                "choices": [
+                name: "problem",
+                title: "Problem",
+                cellType: "dropdown",
+                choices: [
                   "Abnormal chest x-ray",
                   "Anesthesia complications",
                   "Anxiety, depression or mental illness",
@@ -285,55 +286,50 @@ export const medical = {
                   "Stroke or TIA",
                   "Treatment for alcohol and/or drug abuse",
                   "Tuberculosis or positive tuberculin skin test",
-                  "Cosmetic or plastic surgery"
-                ]
+                  "Cosmetic or plastic surgery",
+                ],
               },
               {
-                "name": "answer",
-                "title": "Please answer",
-                "cellType": "radiogroup",
-                "isRequired": true,
-                "choices": [
+                name: "answer",
+                title: "Please answer",
+                cellType: "radiogroup",
+                isRequired: true,
+                choices: [
                   {
-                    "value": "no",
-                    "text": "No"
+                    value: "no",
+                    text: "No",
                   },
                   {
-                    "value": "yes",
-                    "text": "Yes"
-                  }
-                ]
+                    value: "yes",
+                    text: "Yes",
+                  },
+                ],
               },
               {
-                "name": "description",
-                "title": "Describe the problem",
-                "cellType": "comment",
-                "isRequired": true,
-                "visibleIf": "{row.answer} = \"yes\""
-              }
+                name: "description",
+                title: "Describe the problem",
+                cellType: "comment",
+                isRequired: true,
+                visibleIf: '{row.answer} = "yes"',
+              },
             ],
-            "choices": [
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "rowCount": 1
+            choices: [1, 2, 3, 4, 5],
+            rowCount: 1,
           },
           {
-            "type": "matrixdynamic",
-            "name": "problems2",
-            "title": "Indicate whether you have ever had a medical problem and/or surgery related to each of the following",
-            "titleLocation": "top",
-            "columns": [
+            type: "matrixdynamic",
+            name: "problems2",
+            title:
+              "Indicate whether you have ever had a medical problem and/or surgery related to each of the following",
+            titleLocation: "top",
+            columns: [
               {
-                "name": "problem",
-                "title": "Problem",
-                "cellType": "dropdown",
-                "isRequired": true,
-                "maxWidth": "300px",
-                "choices": [
+                name: "problem",
+                title: "Problem",
+                cellType: "dropdown",
+                isRequired: true,
+                maxWidth: "300px",
+                choices: [
                   "Eyes (cataracts, glaucoma)",
                   "Ears, nose, sinuses, or tonsils",
                   "Thyroid or parathyroid glands",
@@ -355,451 +351,403 @@ export const medical = {
                   "Breasts",
                   "Females: uterus, tubes, ovaries",
                   "Males: prostate, penis, testes, vasectomy",
-                  "Other: Describe"
+                  "Other: Describe",
                 ],
-                "choicesOrder": "asc"
+                choicesOrder: "asc",
               },
               {
-                "name": "type",
-                "title": "Type",
-                "cellType": "checkbox",
-                "isRequired": true,
-                "choices": [
+                name: "type",
+                title: "Type",
+                cellType: "checkbox",
+                isRequired: true,
+                choices: [
                   {
-                    "value": "medical",
-                    "text": "Medical Problem"
+                    value: "medical",
+                    text: "Medical Problem",
                   },
                   {
-                    "value": "surgery",
-                    "text": "Surgery"
-                  }
-                ]
+                    value: "surgery",
+                    text: "Surgery",
+                  },
+                ],
               },
               {
-                "name": "year",
-                "title": "Year(s) of Surgery",
-                "cellType": "text",
-                "isRequired": true,
-                "visibleIf": "{row.type} contains \"surgery\""
+                name: "year",
+                title: "Year(s) of Surgery",
+                cellType: "text",
+                isRequired: true,
+                visibleIf: '{row.type} contains "surgery"',
               },
               {
-                "name": "describe",
-                "title": "Describe",
-                "cellType": "comment",
-                "isRequired": true
-              }
+                name: "describe",
+                title: "Describe",
+                cellType: "comment",
+                isRequired: true,
+              },
             ],
-            "choices": [
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "rowCount": 1,
-            "addRowText": "Add Problem"
-          }
-        ]
+            choices: [1, 2, 3, 4, 5],
+            rowCount: 1,
+            addRowText: "Add Problem",
+          },
+        ],
       },
       {
-        "name": "socialHistory",
-        "questionTitleLocation": "left",
-        "title": "Social History",
-        "elements": [
+        name: "socialHistory",
+        questionTitleLocation: "left",
+        title: "Social History",
+        elements: [
           {
-            "type": "panel",
-            "name": "education",
-            "title": "Education",
-            "elements": [
+            type: "panel",
+            name: "education",
+            title: "Education",
+            elements: [
               {
-                "type": "dropdown",
-                "name": "schoolYearsCompleted",
-                "title": "How many yeas of school have you completed?",
-                "isRequired": true,
-                "choicesMax": 12
-              }
-            ]
+                type: "dropdown",
+                name: "schoolYearsCompleted",
+                title: "How many yeas of school have you completed?",
+                isRequired: true,
+                choicesMax: 12,
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "occupations",
-            "title": "Occupations",
-            "elements": [
+            type: "panel",
+            name: "occupations",
+            title: "Occupations",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "employmentStatus",
-                "title": "Your current employment status:",
-                "isRequired": true,
-                "choices": [
-                  "Retired",
-                  "Unemployed",
-                  "Homemaker",
-                  "Employed"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "employmentStatus",
+                title: "Your current employment status:",
+                isRequired: true,
+                choices: ["Retired", "Unemployed", "Homemaker", "Employed"],
+                colCount: 0,
               },
               {
-                "type": "text",
-                "name": "currentOcupation",
-                "visible": false,
-                "visibleIf": "{employmentStatus} = 'Employed'",
-                "title": "Current Ocupation(s):",
-                "isRequired": true
+                type: "text",
+                name: "currentOcupation",
+                visible: false,
+                visibleIf: "{employmentStatus} = 'Employed'",
+                title: "Current Ocupation(s):",
+                isRequired: true,
               },
               {
-                "type": "comment",
-                "name": "previousOccupations",
-                "title": "Previous Occupations/Jobs:"
-              }
-            ]
+                type: "comment",
+                name: "previousOccupations",
+                title: "Previous Occupations/Jobs:",
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "disability",
-            "title": "Disability",
-            "elements": [
+            type: "panel",
+            name: "disability",
+            title: "Disability",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "disabled",
-                "title": "Are you disabled?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "disabled",
+                title: "Are you disabled?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "comment",
-                "name": "disableInfo",
-                "visible": false,
-                "visibleIf": "{disabled} = 'Yes'",
-                "title": "Info:"
-              }
-            ]
+                type: "comment",
+                name: "disableInfo",
+                visible: false,
+                visibleIf: "{disabled} = 'Yes'",
+                title: "Info:",
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "abuse",
-            "title": "Abuse",
-            "elements": [
+            type: "panel",
+            name: "abuse",
+            title: "Abuse",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "abused",
-                "title": "Have you even been physically, sexually, or emotionally abused?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "abused",
+                title:
+                  "Have you even been physically, sexually, or emotionally abused?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "comment",
-                "name": "abusedInfo",
-                "visible": false,
-                "visibleIf": "{abused} = 'Yes'",
-                "title": "Info:"
+                type: "comment",
+                name: "abusedInfo",
+                visible: false,
+                visibleIf: "{abused} = 'Yes'",
+                title: "Info:",
               },
               {
-                "type": "matrixdropdown",
-                "name": "subsctancesUsing",
-                "title": "Have you used any of the following substances?",
-                "titleLocation": "top",
-                "columns": [
+                type: "matrixdropdown",
+                name: "subsctancesUsing",
+                title: "Have you used any of the following substances?",
+                titleLocation: "top",
+                columns: [
                   {
-                    "name": "current",
-                    "title": "Currently Use?",
-                    "cellType": "radiogroup",
-                    "isRequired": true,
-                    "width": "200px",
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ]
+                    name: "current",
+                    title: "Currently Use?",
+                    cellType: "radiogroup",
+                    isRequired: true,
+                    width: "200px",
+                    choices: ["No", "Yes"],
                   },
                   {
-                    "name": "previous",
-                    "title": "Previously Used?",
-                    "cellType": "radiogroup",
-                    "isRequired": true,
-                    "width": "200px",
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ]
+                    name: "previous",
+                    title: "Previously Used?",
+                    cellType: "radiogroup",
+                    isRequired: true,
+                    width: "200px",
+                    choices: ["No", "Yes"],
                   },
                   {
-                    "name": "amount",
-                    "title": "Type/Amount/Frequancy",
-                    "cellType": "text",
-                    "isRequired": true,
-                    "width": "200px",
-                    "visibleIf": "{row.current} = 'Yes' or {row.previous} = 'Yes'"
+                    name: "amount",
+                    title: "Type/Amount/Frequancy",
+                    cellType: "text",
+                    isRequired: true,
+                    width: "200px",
+                    visibleIf:
+                      "{row.current} = 'Yes' or {row.previous} = 'Yes'",
                   },
                   {
-                    "name": "long",
-                    "title": "How Long? (Years)",
-                    "cellType": "text",
-                    "isRequired": true,
-                    "width": "200px",
-                    "visibleIf": "{row.current} = 'Yes' or {row.previous} = 'Yes'"
+                    name: "long",
+                    title: "How Long? (Years)",
+                    cellType: "text",
+                    isRequired: true,
+                    width: "200px",
+                    visibleIf:
+                      "{row.current} = 'Yes' or {row.previous} = 'Yes'",
                   },
                   {
-                    "name": "stopped",
-                    "title": "When stopped? (Year)",
-                    "cellType": "text",
-                    "isRequired": true,
-                    "width": "200px",
-                    "visibleIf": "{row.previous} = 'Yes'"
-                  }
+                    name: "stopped",
+                    title: "When stopped? (Year)",
+                    cellType: "text",
+                    isRequired: true,
+                    width: "200px",
+                    visibleIf: "{row.previous} = 'Yes'",
+                  },
                 ],
-                "choices": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
-                "rows": [
+                choices: [1, 2, 3, 4, 5],
+                rows: [
                   "Caffeine: coffee, tea, soda",
                   "Tobacco",
                   "Alcohol - bear, wine, liquor",
-                  "Recreational/Street drugs"
+                  "Recreational/Street drugs",
                 ],
-                "rowTitleWidth": "200px"
-              }
-            ]
+                rowTitleWidth: "200px",
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "maritalStatus",
-            "title": "Marital Status",
-            "elements": [
+            type: "panel",
+            name: "maritalStatus",
+            title: "Marital Status",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "currentlyMarried",
-                "title": "Are you currently married?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
+                type: "radiogroup",
+                name: "currentlyMarried",
+                title: "Are you currently married?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
+              },
+              {
+                type: "text",
+                name: "currentMarriageYear",
+                visible: false,
+                visibleIf: "{currentlyMarried} = 'Yes'",
+                startWithNewLine: false,
+                title: "In what year did this marriage occure?",
+                isRequired: true,
+              },
+              {
+                type: "paneldynamic",
+                name: "previousMarriages",
+                title: "List all previous marriages",
+                templateElements: [
+                  {
+                    type: "text",
+                    name: "previousMarriageYear",
+                    title: "Year married:",
+                    isRequired: true,
+                  },
+                  {
+                    type: "text",
+                    name: "previousMarriageDuration",
+                    startWithNewLine: false,
+                    title: "Duration (in Years):",
+                    isRequired: true,
+                  },
                 ],
-                "colCount": 0
+                panelCount: 1,
+                panelAddText: "Add marriage",
               },
               {
-                "type": "text",
-                "name": "currentMarriageYear",
-                "visible": false,
-                "visibleIf": "{currentlyMarried} = 'Yes'",
-                "startWithNewLine": false,
-                "title": "In what year did this marriage occure?",
-                "isRequired": true
-              },
-              {
-                "type": "paneldynamic",
-                "name": "previousMarriages",
-                "title": "List all previous marriages",
-                "templateElements": [
+                type: "panel",
+                name: "currentSpouse",
+                title: "Current Spouse Information",
+                elements: [
                   {
-                    "type": "text",
-                    "name": "previousMarriageYear",
-                    "title": "Year married:",
-                    "isRequired": true
+                    type: "radiogroup",
+                    name: "currentSpouseStatus",
+                    title: " ",
+                    isRequired: true,
+                    choices: ["Not applicable", "Alive", "Deceased"],
+                    colCount: 0,
                   },
                   {
-                    "type": "text",
-                    "name": "previousMarriageDuration",
-                    "startWithNewLine": false,
-                    "title": "Duration (in Years):",
-                    "isRequired": true
-                  }
+                    type: "text",
+                    name: "currentSpouseAge",
+                    visible: false,
+                    visibleIf: "{currentSpouseStatus} = 'Alive'",
+                    startWithNewLine: false,
+                    title: "Age",
+                    isRequired: true,
+                  },
+                  {
+                    type: "comment",
+                    name: "currentSpouseHelthProblems",
+                    visibleIf: "{currentSpouseStatus} != 'Not applicable' ",
+                    title: "Health problems or cause of death:",
+                    isRequired: true,
+                    rows: 2,
+                  },
+                  {
+                    type: "radiogroup",
+                    name: "currentSpouseEmploymentStatus",
+                    visible: false,
+                    visibleIf: "{currentSpouseStatus} = 'Alive'",
+                    title: "Current employment status:",
+                    isRequired: true,
+                    choices: ["Retired", "Unemployed", "Homemaker", "Employed"],
+                    colCount: 0,
+                  },
                 ],
-                "panelCount": 1,
-                "panelAddText": "Add marriage"
               },
               {
-                "type": "panel",
-                "name": "currentSpouse",
-                "title": "Current Spouse Information",
-                "elements": [
-                  {
-                    "type": "radiogroup",
-                    "name": "currentSpouseStatus",
-                    "title": " ",
-                    "isRequired": true,
-                    "choices": [
-                      "Not applicable",
-                      "Alive",
-                      "Deceased"
-                    ],
-                    "colCount": 0
-                  },
-                  {
-                    "type": "text",
-                    "name": "currentSpouseAge",
-                    "visible": false,
-                    "visibleIf": "{currentSpouseStatus} = 'Alive'",
-                    "startWithNewLine": false,
-                    "title": "Age",
-                    "isRequired": true
-                  },
-                  {
-                    "type": "comment",
-                    "name": "currentSpouseHelthProblems",
-                    "visibleIf": "{currentSpouseStatus} != 'Not applicable' ",
-                    "title": "Health problems or cause of death:",
-                    "isRequired": true,
-                    "rows": 2
-                  },
-                  {
-                    "type": "radiogroup",
-                    "name": "currentSpouseEmploymentStatus",
-                    "visible": false,
-                    "visibleIf": "{currentSpouseStatus} = 'Alive'",
-                    "title": "Current employment status:",
-                    "isRequired": true,
-                    "choices": [
-                      "Retired",
-                      "Unemployed",
-                      "Homemaker",
-                      "Employed"
-                    ],
-                    "colCount": 0
-                  }
-                ]
+                type: "text",
+                name: "currentSpouseOccupation",
+                visible: false,
+                visibleIf: "{currentSpouseEmploymentStatus} = 'Employed'",
+                title: "Current occupation(s):",
+                isRequired: true,
               },
-              {
-                "type": "text",
-                "name": "currentSpouseOccupation",
-                "visible": false,
-                "visibleIf": "{currentSpouseEmploymentStatus} = 'Employed'",
-                "title": "Current occupation(s):",
-                "isRequired": true
-              }
-            ]
-          }
-        ]
+            ],
+          },
+        ],
       },
       {
-        "name": "familyHistory",
-        "questionTitleLocation": "left",
-        "title": "Family History",
-        "elements": [
+        name: "familyHistory",
+        questionTitleLocation: "left",
+        title: "Family History",
+        elements: [
           {
-            "type": "radiogroup",
-            "name": "adopted",
-            "title": "Are you adopted?",
-            "isRequired": true,
-            "choices": [
-              "Yes",
-              "No"
-            ],
-            "colCount": 0
+            type: "radiogroup",
+            name: "adopted",
+            title: "Are you adopted?",
+            isRequired: true,
+            choices: ["Yes", "No"],
+            colCount: 0,
           },
           {
-            "type": "html",
-            "name": "adoptedInfo",
-            "visible": false,
-            "visibleIf": "{adopted} = 'Yes'",
-            "html": "If known, complete the following information about your <b>blood</b> relatives (include children).  Exclude adoptive parents, siblings and   adopted children."
+            type: "html",
+            name: "adoptedInfo",
+            visible: false,
+            visibleIf: "{adopted} = 'Yes'",
+            html: "If known, complete the following information about your <b>blood</b> relatives (include children).  Exclude adoptive parents, siblings and   adopted children.",
           },
           {
-            "type": "html",
-            "name": "nonAdoptedInfo",
-            "visible": false,
-            "visibleIf": "{adopted} = 'No'",
-            "html": "Complete the following information about your <b>blood</b> relatives.  Exclude adoptive siblings and adopted children. "
+            type: "html",
+            name: "nonAdoptedInfo",
+            visible: false,
+            visibleIf: "{adopted} = 'No'",
+            html: "Complete the following information about your <b>blood</b> relatives.  Exclude adoptive siblings and adopted children. ",
           },
           {
-            "type": "paneldynamic",
-            "name": "bloodRelativesInfo",
-            "title": "Blood relatives information",
-            "templateElements": [
+            type: "paneldynamic",
+            name: "bloodRelativesInfo",
+            title: "Blood relatives information",
+            templateElements: [
               {
-                "type": "dropdown",
-                "name": "relativeType",
-                "title": "Blood Relative:",
-                "isRequired": true,
-                "choices": [
+                type: "dropdown",
+                name: "relativeType",
+                title: "Blood Relative:",
+                isRequired: true,
+                choices: [
                   "Father",
                   "Mother",
                   "Brother",
                   "Sister",
                   "Son",
-                  "Daughter"
-                ]
-              },
-              {
-                "type": "radiogroup",
-                "name": "relativeStatus",
-                "startWithNewLine": false,
-                "title": "Is he/she:",
-                "isRequired": true,
-                "choices": [
-                  "Alive",
-                  "Deceased",
-                  "Unknown"
+                  "Daughter",
                 ],
-                "colCount": 0
               },
               {
-                "type": "text",
-                "name": "relativeAge",
-                "visible": false,
-                "visibleIf": "{panel.relativeStatus} = 'Alive'",
-                "startWithNewLine": false,
-                "title": "Current age:",
-                "isRequired": true
+                type: "radiogroup",
+                name: "relativeStatus",
+                startWithNewLine: false,
+                title: "Is he/she:",
+                isRequired: true,
+                choices: ["Alive", "Deceased", "Unknown"],
+                colCount: 0,
               },
               {
-                "type": "text",
-                "name": "relativeAgeOfDeath",
-                "visible": false,
-                "visibleIf": "{panel.relativeStatus} = 'Deceased'",
-                "startWithNewLine": false,
-                "title": "Age of death:",
-                "isRequired": true
+                type: "text",
+                name: "relativeAge",
+                visible: false,
+                visibleIf: "{panel.relativeStatus} = 'Alive'",
+                startWithNewLine: false,
+                title: "Current age:",
+                isRequired: true,
               },
               {
-                "type": "panel",
-                "name": "relativeDeathInfo",
-                "visible": false,
-                "visibleIf": "{panel.relativeStatus} = 'Deceased'",
-                "elements": [
+                type: "text",
+                name: "relativeAgeOfDeath",
+                visible: false,
+                visibleIf: "{panel.relativeStatus} = 'Deceased'",
+                startWithNewLine: false,
+                title: "Age of death:",
+                isRequired: true,
+              },
+              {
+                type: "panel",
+                name: "relativeDeathInfo",
+                visible: false,
+                visibleIf: "{panel.relativeStatus} = 'Deceased'",
+                elements: [
                   {
-                    "type": "radiogroup",
-                    "name": "relativeCauseOfDeath",
-                    "title": "Cause of death:",
-                    "isRequired": true,
-                    "choices": [
-                      "Known",
-                      "Unknown"
-                    ],
-                    "colCount": 0
+                    type: "radiogroup",
+                    name: "relativeCauseOfDeath",
+                    title: "Cause of death:",
+                    isRequired: true,
+                    choices: ["Known", "Unknown"],
+                    colCount: 0,
                   },
                   {
-                    "type": "comment",
-                    "name": "relativeCauseOfDeathDescription",
-                    "visible": false,
-                    "visibleIf": "{panel.relativeCauseOfDeath} = 'Known'",
-                    "title": "Description:",
-                    "isRequired": true
-                  }
-                ]
+                    type: "comment",
+                    name: "relativeCauseOfDeathDescription",
+                    visible: false,
+                    visibleIf: "{panel.relativeCauseOfDeath} = 'Known'",
+                    title: "Description:",
+                    isRequired: true,
+                  },
+                ],
               },
               {
-                "type": "matrixdynamic",
-                "name": "relativeCondition",
-                "title": "Describe the illness or conditios",
-                "titleLocation": "top",
-                "columns": [
+                type: "matrixdynamic",
+                name: "relativeCondition",
+                title: "Describe the illness or conditios",
+                titleLocation: "top",
+                columns: [
                   {
-                    "name": "name",
-                    "title": "Illness/Condition",
-                    "cellType": "dropdown",
-                    "isRequired": true,
-                    "choices": [
+                    name: "name",
+                    title: "Illness/Condition",
+                    cellType: "dropdown",
+                    isRequired: true,
+                    choices: [
                       "Cancer",
                       "Heart Disease",
                       "Diabetes",
@@ -812,503 +760,436 @@ export const medical = {
                       "Tuberculosis",
                       "Anesthesia Complications",
                       "Genetic Disorder",
-                      "Other"
-                    ]
+                      "Other",
+                    ],
                   },
                   {
-                    "name": "description",
-                    "title": "Describe",
-                    "cellType": "comment",
-                    "isRequired": true
-                  }
+                    name: "description",
+                    title: "Describe",
+                    cellType: "comment",
+                    isRequired: true,
+                  },
                 ],
-                "choices": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
-                "rowCount": 1,
-                "addRowText": "Add illness"
-              }
+                choices: [1, 2, 3, 4, 5],
+                rowCount: 1,
+                addRowText: "Add illness",
+              },
             ],
-            "panelCount": 1,
-            "panelAddText": "Add Family Member"
+            panelCount: 1,
+            panelAddText: "Add Family Member",
           },
           {
-            "type": "comment",
-            "name": "relativesAdditionalInfo",
-            "title": "Other information about your family which you want us to know: "
-          }
-        ]
+            type: "comment",
+            name: "relativesAdditionalInfo",
+            title:
+              "Other information about your family which you want us to know: ",
+          },
+        ],
       },
       {
-        "name": "healthcareProvider",
-        "questionTitleLocation": "left",
-        "title": "Healthcare Provider Information",
-        "elements": [
+        name: "healthcareProvider",
+        questionTitleLocation: "left",
+        title: "Healthcare Provider Information",
+        elements: [
           {
-            "type": "radiogroup",
-            "name": "primaryCareProvider",
-            "title": "Do you have a Primary Care Provider?",
-            "isRequired": true,
-            "choices": [
-              "No",
-              "Yes"
+            type: "radiogroup",
+            name: "primaryCareProvider",
+            title: "Do you have a Primary Care Provider?",
+            isRequired: true,
+            choices: ["No", "Yes"],
+            colCount: 0,
+          },
+          {
+            type: "panel",
+            name: "primaryCareProviderInfo",
+            visible: false,
+            visibleIf: "{primaryCareProvider} = 'Yes'",
+            title: "Primary Care Provider",
+            elements: [
+              {
+                type: "text",
+                name: "primaryCareProviderName",
+                title: "Name:",
+                isRequired: true,
+              },
+              {
+                type: "text",
+                name: "primaryCareProviderPhone",
+                startWithNewLine: false,
+                title: "Phone:",
+                isRequired: true,
+              },
+              {
+                type: "comment",
+                name: "primaryCareProviderAddress",
+                title: "Address:",
+              },
+              {
+                type: "radiogroup",
+                name: "primaryCareProviderSent",
+                title:
+                  "Do you want a summary of your visit sent to this person?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
+              },
             ],
-            "colCount": 0
           },
           {
-            "type": "panel",
-            "name": "primaryCareProviderInfo",
-            "visible": false,
-            "visibleIf": "{primaryCareProvider} = 'Yes'",
-            "title": "Primary Care Provider",
-            "elements": [
+            type: "radiogroup",
+            name: "primaryCareProviderRecommend",
+            title:
+              "Did a non-Vanderbilt physician or healthcare provider recommend or arrange this visit for you?",
+            isRequired: true,
+            choices: ["No", "Yes"],
+            colCount: 0,
+          },
+          {
+            type: "panel",
+            name: "primaryCareProviderRecommendInfo",
+            visible: false,
+            visibleIf: "{primaryCareProviderRecommend} = 'Yes'",
+            elements: [
               {
-                "type": "text",
-                "name": "primaryCareProviderName",
-                "title": "Name:",
-                "isRequired": true
-              },
-              {
-                "type": "text",
-                "name": "primaryCareProviderPhone",
-                "startWithNewLine": false,
-                "title": "Phone:",
-                "isRequired": true
-              },
-              {
-                "type": "comment",
-                "name": "primaryCareProviderAddress",
-                "title": "Address:"
-              },
-              {
-                "type": "radiogroup",
-                "name": "primaryCareProviderSent",
-                "title": "Do you want a summary of your visit sent to this person?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
+                type: "radiogroup",
+                name: "primaryCareProviderWhoSent",
+                title: "Who sent you?",
+                isRequired: true,
+                choices: [
+                  {
+                    value: "primary",
+                    text: "Your Primary Care Provider (as listed above) ",
+                  },
+                  {
+                    value: "other",
+                    text: "Other physician or healthcare provider",
+                  },
                 ],
-                "colCount": 0
-              }
-            ]
-          },
-          {
-            "type": "radiogroup",
-            "name": "primaryCareProviderRecommend",
-            "title": "Did a non-Vanderbilt physician or healthcare provider recommend or arrange this visit for you?",
-            "isRequired": true,
-            "choices": [
-              "No",
-              "Yes"
+                colCount: 0,
+              },
+              {
+                type: "panel",
+                name: "primaryCareProviderOtherInfo",
+                visible: false,
+                visibleIf: "{primaryCareProviderWhoSent} = 'other'",
+                title: "Other physician or healthcare provider",
+                elements: [
+                  {
+                    type: "text",
+                    name: "primaryCareProviderOtherName",
+                    title: "Name:",
+                    isRequired: true,
+                  },
+                  {
+                    type: "text",
+                    name: "primaryCareProviderOtherPhone",
+                    startWithNewLine: false,
+                    title: "Phone:",
+                    isRequired: true,
+                  },
+                  {
+                    type: "comment",
+                    name: "primaryCareProviderOtherAddress",
+                    title: "Address:",
+                  },
+                  {
+                    type: "radiogroup",
+                    name: "primaryCareProviderOtherSent",
+                    title:
+                      "Do you want a summary of your visit sent to this person?",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
+                  },
+                ],
+              },
             ],
-            "colCount": 0
           },
-          {
-            "type": "panel",
-            "name": "primaryCareProviderRecommendInfo",
-            "visible": false,
-            "visibleIf": "{primaryCareProviderRecommend} = 'Yes'",
-            "elements": [
-              {
-                "type": "radiogroup",
-                "name": "primaryCareProviderWhoSent",
-                "title": "Who sent you?",
-                "isRequired": true,
-                "choices": [
-                  {
-                    "value": "primary",
-                    "text": "Your Primary Care Provider (as listed above) "
-                  },
-                  {
-                    "value": "other",
-                    "text": "Other physician or healthcare provider"
-                  }
-                ],
-                "colCount": 0
-              },
-              {
-                "type": "panel",
-                "name": "primaryCareProviderOtherInfo",
-                "visible": false,
-                "visibleIf": "{primaryCareProviderWhoSent} = 'other'",
-                "title": "Other physician or healthcare provider",
-                "elements": [
-                  {
-                    "type": "text",
-                    "name": "primaryCareProviderOtherName",
-                    "title": "Name:",
-                    "isRequired": true
-                  },
-                  {
-                    "type": "text",
-                    "name": "primaryCareProviderOtherPhone",
-                    "startWithNewLine": false,
-                    "title": "Phone:",
-                    "isRequired": true
-                  },
-                  {
-                    "type": "comment",
-                    "name": "primaryCareProviderOtherAddress",
-                    "title": "Address:"
-                  },
-                  {
-                    "type": "radiogroup",
-                    "name": "primaryCareProviderOtherSent",
-                    "title": "Do you want a summary of your visit sent to this person?",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        ],
       },
       {
-        "name": "medications",
-        "title": "Medications",
-        "elements": [
+        name: "medications",
+        title: "Medications",
+        elements: [
           {
-            "type": "panel",
-            "name": "currentUsingMedication",
-            "title": "Medications currently using",
-            "elements": [
+            type: "panel",
+            name: "currentUsingMedication",
+            title: "Medications currently using",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "currentMedication",
-                "title": "Are you currently taking any prescription and/or non-prescription medications including vitamins, nutritional supplements, oral contraceptives, pain relievers, diuretics, laxatives, herbal remedies, and cold medications? ",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "currentMedication",
+                title:
+                  "Are you currently taking any prescription and/or non-prescription medications including vitamins, nutritional supplements, oral contraceptives, pain relievers, diuretics, laxatives, herbal remedies, and cold medications? ",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "matrixdynamic",
-                "name": "currentMedicationList",
-                "visible": false,
-                "visibleIf": "{currentMedication} = 'Yes'",
-                "title": "Medication list",
-                "description": "Please add all medication you are currently taking",
-                "columns": [
+                type: "matrixdynamic",
+                name: "currentMedicationList",
+                visible: false,
+                visibleIf: "{currentMedication} = 'Yes'",
+                title: "Medication list",
+                description:
+                  "Please add all medication you are currently taking",
+                columns: [
                   {
-                    "name": "name",
-                    "title": "Name of Medication",
-                    "cellType": "text",
-                    "isRequired": true
+                    name: "name",
+                    title: "Name of Medication",
+                    cellType: "text",
+                    isRequired: true,
                   },
                   {
-                    "name": "dose",
-                    "title": "Dose",
-                    "cellType": "text",
-                    "isRequired": true
+                    name: "dose",
+                    title: "Dose",
+                    cellType: "text",
+                    isRequired: true,
                   },
                   {
-                    "name": "often",
-                    "title": "How Often Taken",
-                    "cellType": "text",
-                    "isRequired": true
-                  }
+                    name: "often",
+                    title: "How Often Taken",
+                    cellType: "text",
+                    isRequired: true,
+                  },
                 ],
-                "choices": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
-                "rowCount": 1,
-                "addRowText": "Add medication"
-              }
-            ]
+                choices: [1, 2, 3, 4, 5],
+                rowCount: 1,
+                addRowText: "Add medication",
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "recentlyUsedMedication",
-            "title": "Medication recently used",
-            "elements": [
+            type: "panel",
+            name: "recentlyUsedMedication",
+            title: "Medication recently used",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "recentlyUsedMedication",
-                "title": "Are there other medications you have recently used?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "recentlyUsedMedication",
+                title: "Are there other medications you have recently used?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "matrixdynamic",
-                "name": "recentlyUsedMedicationList",
-                "visible": false,
-                "visibleIf": "{recentlyUsedMedication} = 'Yes'",
-                "title": "Medication list",
-                "description": "Please add all medication you have recently used",
-                "columns": [
+                type: "matrixdynamic",
+                name: "recentlyUsedMedicationList",
+                visible: false,
+                visibleIf: "{recentlyUsedMedication} = 'Yes'",
+                title: "Medication list",
+                description: "Please add all medication you have recently used",
+                columns: [
                   {
-                    "name": "name",
-                    "title": "Name of Medication",
-                    "cellType": "text",
-                    "isRequired": true
+                    name: "name",
+                    title: "Name of Medication",
+                    cellType: "text",
+                    isRequired: true,
                   },
                   {
-                    "name": "dose",
-                    "title": "Dose",
-                    "cellType": "text",
-                    "isRequired": true
+                    name: "dose",
+                    title: "Dose",
+                    cellType: "text",
+                    isRequired: true,
                   },
                   {
-                    "name": "often",
-                    "title": "How Often Taken",
-                    "cellType": "text",
-                    "isRequired": true
-                  }
+                    name: "often",
+                    title: "How Often Taken",
+                    cellType: "text",
+                    isRequired: true,
+                  },
                 ],
-                "choices": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
-                "rowCount": 1,
-                "addRowText": "Add medication"
-              }
-            ]
+                choices: [1, 2, 3, 4, 5],
+                rowCount: 1,
+                addRowText: "Add medication",
+              },
+            ],
           },
           {
-            "type": "radiogroup",
-            "name": "aspirinContainingProducts",
-            "title": "Have you taken aspirin-containing products in the last two weeks?",
-            "isRequired": true,
-            "choices": [
-              "No",
-              "Yes"
-            ],
-            "colCount": 0
+            type: "radiogroup",
+            name: "aspirinContainingProducts",
+            title:
+              "Have you taken aspirin-containing products in the last two weeks?",
+            isRequired: true,
+            choices: ["No", "Yes"],
+            colCount: 0,
           },
           {
-            "type": "radiogroup",
-            "name": "steroidDrugs",
-            "title": "Have you taken steroid or cortisone-type drugs within the last year?",
-            "isRequired": true,
-            "choices": [
-              "No",
-              "Yes"
-            ],
-            "colCount": 0
-          }
-        ]
+            type: "radiogroup",
+            name: "steroidDrugs",
+            title:
+              "Have you taken steroid or cortisone-type drugs within the last year?",
+            isRequired: true,
+            choices: ["No", "Yes"],
+            colCount: 0,
+          },
+        ],
       },
       {
-        "name": "allergies",
-        "title": "Allergies",
-        "elements": [
+        name: "allergies",
+        title: "Allergies",
+        elements: [
           {
-            "type": "panel",
-            "name": "allergiesMedication",
-            "title": "Allergies to Medication",
-            "elements": [
+            type: "panel",
+            name: "allergiesMedication",
+            title: "Allergies to Medication",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "hasAllergiesMedication",
-                "title": "Have you had hives, skin rash, breathing problems, or other allergic reactions to medications?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "hasAllergiesMedication",
+                title:
+                  "Have you had hives, skin rash, breathing problems, or other allergic reactions to medications?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "matrixdynamic",
-                "name": "allergiesMedicationList",
-                "visible": false,
-                "visibleIf": "{hasAllergiesMedication} = 'Yes'",
-                "title": "Medication list",
-                "columns": [
+                type: "matrixdynamic",
+                name: "allergiesMedicationList",
+                visible: false,
+                visibleIf: "{hasAllergiesMedication} = 'Yes'",
+                title: "Medication list",
+                columns: [
                   {
-                    "name": "name",
-                    "title": "Name of Medication",
-                    "cellType": "text",
-                    "isRequired": true
+                    name: "name",
+                    title: "Name of Medication",
+                    cellType: "text",
+                    isRequired: true,
                   },
                   {
-                    "name": "description",
-                    "title": "Describe Allergic Reaction",
-                    "cellType": "comment",
-                    "isRequired": true
-                  }
+                    name: "description",
+                    title: "Describe Allergic Reaction",
+                    cellType: "comment",
+                    isRequired: true,
+                  },
                 ],
-                "choices": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
-                "rowCount": 1,
-                "addRowText": "Add medication"
-              }
-            ]
+                choices: [1, 2, 3, 4, 5],
+                rowCount: 1,
+                addRowText: "Add medication",
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "unpleasentToMedication",
-            "title": "Unpleasant Side Effects to Medications",
-            "elements": [
+            type: "panel",
+            name: "unpleasentToMedication",
+            title: "Unpleasant Side Effects to Medications",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "hasUnpleasantMedication",
-                "title": "Are there medications, other than those you are allergic to, that you would prefer not to take due to prior unpleasant side effects?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "hasUnpleasantMedication",
+                title:
+                  "Are there medications, other than those you are allergic to, that you would prefer not to take due to prior unpleasant side effects?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "matrixdynamic",
-                "name": "unpleasantMedicationList",
-                "visible": false,
-                "visibleIf": "{hasUnpleasantMedication} = 'Yes'",
-                "title": "Medication list",
-                "columns": [
+                type: "matrixdynamic",
+                name: "unpleasantMedicationList",
+                visible: false,
+                visibleIf: "{hasUnpleasantMedication} = 'Yes'",
+                title: "Medication list",
+                columns: [
                   {
-                    "name": "name",
-                    "title": "Name of Medication",
-                    "cellType": "text",
-                    "isRequired": true
+                    name: "name",
+                    title: "Name of Medication",
+                    cellType: "text",
+                    isRequired: true,
                   },
                   {
-                    "name": "description",
-                    "title": "Describe the Reaction",
-                    "cellType": "text",
-                    "isRequired": true
-                  }
+                    name: "description",
+                    title: "Describe the Reaction",
+                    cellType: "text",
+                    isRequired: true,
+                  },
                 ],
-                "choices": [
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
-                "rowCount": 1,
-                "addRowText": "Add medication"
+                choices: [1, 2, 3, 4, 5],
+                rowCount: 1,
+                addRowText: "Add medication",
               },
               {
-                "type": "panel",
-                "name": "allergiesReaction",
-                "questionTitleLocation": "left",
-                "title": "Have you had an allergic reaction to:",
-                "elements": [
+                type: "panel",
+                name: "allergiesReaction",
+                questionTitleLocation: "left",
+                title: "Have you had an allergic reaction to:",
+                elements: [
                   {
-                    "type": "radiogroup",
-                    "name": "allergicReactionXRay",
-                    "title": "Iodine or X-ray contrast dye",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
+                    type: "radiogroup",
+                    name: "allergicReactionXRay",
+                    title: "Iodine or X-ray contrast dye",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
                   },
                   {
-                    "type": "radiogroup",
-                    "name": "allergicReactionBee",
-                    "startWithNewLine": false,
-                    "title": "Bee or wasp stings",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
+                    type: "radiogroup",
+                    name: "allergicReactionBee",
+                    startWithNewLine: false,
+                    title: "Bee or wasp stings",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
                   },
                   {
-                    "type": "radiogroup",
-                    "name": "allergicReactionLatext",
-                    "title": "Latex or Rubber",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
+                    type: "radiogroup",
+                    name: "allergicReactionLatext",
+                    title: "Latex or Rubber",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
                   },
                   {
-                    "type": "radiogroup",
-                    "name": "allergicReactionTape",
-                    "startWithNewLine": false,
-                    "title": "Adhesive tape",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
-                  }
-                ]
-              }
-            ]
+                    type: "radiogroup",
+                    name: "allergicReactionTape",
+                    startWithNewLine: false,
+                    title: "Adhesive tape",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
+                  },
+                ],
+              },
+            ],
           },
           {
-            "type": "panel",
-            "name": "foodAllergiesInfo",
-            "questionTitleLocation": "left",
-            "title": "Food Allergies",
-            "elements": [
+            type: "panel",
+            name: "foodAllergiesInfo",
+            questionTitleLocation: "left",
+            title: "Food Allergies",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "hasFoodAllergies",
-                "title": "Do you have any food allergies?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "hasFoodAllergies",
+                title: "Do you have any food allergies?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "comment",
-                "name": "foodAllergiesDescription",
-                "visible": false,
-                "visibleIf": "{hasFoodAllergies} = 'Yes'",
-                "title": "Describe"
-              }
-            ]
-          }
-        ]
+                type: "comment",
+                name: "foodAllergiesDescription",
+                visible: false,
+                visibleIf: "{hasFoodAllergies} = 'Yes'",
+                title: "Describe",
+              },
+            ],
+          },
+        ],
       },
       {
-        "name": "systemsReview",
-        "questionTitleLocation": "left",
-        "title": "System Review",
-        "elements": [
+        name: "systemsReview",
+        questionTitleLocation: "left",
+        title: "System Review",
+        elements: [
           {
-            "type": "matrix",
-            "name": "sympthoms",
-            "title": "Indicate whether you have experienced the following symptoms during recent months, unless otherwise specified",
-            "titleLocation": "top",
-            "isRequired": true,
-            "columns": [
-              "No",
-              "Yes"
-            ],
-            "rows": [
+            type: "matrix",
+            name: "sympthoms",
+            title:
+              "Indicate whether you have experienced the following symptoms during recent months, unless otherwise specified",
+            titleLocation: "top",
+            isRequired: true,
+            columns: ["No", "Yes"],
+            rows: [
               "Skin rash, sore, excessive bruising or change of a mole?",
               "Excessive thirst or urination?",
               "Change in sexual drive or performance?",
@@ -1316,8 +1197,8 @@ export const medical = {
               "Eye problems such as double or blurred vision, cataracts or glaucoma?",
               "Diminished hearing, dizziness, hoarseness or sinus problems?",
               {
-                "value": "dentures",
-                "text": "Do you wear dentures?"
+                value: "dentures",
+                text: "Do you wear dentures?",
               },
               "Bothered with cough, shortness of breath, wheezing or asthma?",
               "Coughing up sputum or blood?",
@@ -1330,12 +1211,12 @@ export const medical = {
               "Difficulty with swallowing, heartburn, nausea, vomiting or stomach trouble?",
               "Significant problems with constipation, diarrhea, blood/changes in bowel movements?",
               {
-                "value": "colon_rectum_x-ray",
-                "text": "Have you had a colon or rectum x-ray or instrument examination (proctoscopy, sigmoidoscopy, colonoscopy)?"
+                value: "colon_rectum_x-ray",
+                text: "Have you had a colon or rectum x-ray or instrument examination (proctoscopy, sigmoidoscopy, colonoscopy)?",
               },
               {
-                "value": "endoscopy",
-                "text": "Have you had an upper endoscopy to evaluate the stomach for varices?"
+                value: "endoscopy",
+                text: "Have you had an upper endoscopy to evaluate the stomach for varices?",
               },
               "Have you had any treatment for varices? (sclerotherapy, banding)",
               "Difficulty starting your urinary stream, completely emptying your bladder or leaking urine from your bladder?",
@@ -1350,320 +1231,288 @@ export const medical = {
               "Problems falling asleep, staying asleep, sleep apnea or disruptive snoring?",
               "Have you ever felt a need to cut down on your alcohol consumption?",
               "Do relatives/friends worry or complain about your alcohol consumption?",
-              "Have you been physically, sexually, or emotionally abused?"
+              "Have you been physically, sexually, or emotionally abused?",
             ],
-            "isAllRowRequired": true
+            isAllRowRequired: true,
           },
           {
-            "type": "radiogroup",
-            "name": "howWearDentures",
-            "visible": false,
-            "visibleIf": "{sympthoms.dentures}  = 'Yes'",
-            "title": "How do you wear dentures?",
-            "isRequired": true,
-            "choices": [
-              " Ful",
-              "Upper",
-              "Lower",
-              "Partial"
-            ],
-            "colCount": 0
+            type: "radiogroup",
+            name: "howWearDentures",
+            visible: false,
+            visibleIf: "{sympthoms.dentures}  = 'Yes'",
+            title: "How do you wear dentures?",
+            isRequired: true,
+            choices: [" Ful", "Upper", "Lower", "Partial"],
+            colCount: 0,
           },
           {
-            "type": "multipletext",
-            "name": "colonRectumDate",
-            "visible": false,
-            "visibleIf": "{sympthoms.colon_rectum_x-ray} = 'Yes'",
-            "title": "Whe did you do a colon or rectum x-ray or instrument examination (proctoscopy, sigmoidoscopy, colonoscopy)?  Approximate date:",
-            "isRequired": true,
-            "items": [
+            type: "multipletext",
+            name: "colonRectumDate",
+            visible: false,
+            visibleIf: "{sympthoms.colon_rectum_x-ray} = 'Yes'",
+            title:
+              "Whe did you do a colon or rectum x-ray or instrument examination (proctoscopy, sigmoidoscopy, colonoscopy)?  Approximate date:",
+            isRequired: true,
+            items: [
               {
-                "name": "mo",
-                "title": "Month"
+                name: "mo",
+                title: "Month",
               },
               {
-                "name": "year",
-                "title": "Year"
-              }
+                name: "year",
+                title: "Year",
+              },
             ],
-            "colCount": 2
+            colCount: 2,
           },
           {
-            "type": "multipletext",
-            "name": "endoscopyDate",
-            "visible": false,
-            "visibleIf": "{sympthoms.endoscopy} = 'Yes'",
-            "title": "Whe did you have an upper endoscopy to evaluate the stomach for varices?  Approximate date:",
-            "isRequired": true,
-            "items": [
+            type: "multipletext",
+            name: "endoscopyDate",
+            visible: false,
+            visibleIf: "{sympthoms.endoscopy} = 'Yes'",
+            title:
+              "Whe did you have an upper endoscopy to evaluate the stomach for varices?  Approximate date:",
+            isRequired: true,
+            items: [
               {
-                "name": "mo",
-                "title": "Month"
+                name: "mo",
+                title: "Month",
               },
               {
-                "name": "year",
-                "title": "Year"
-              }
+                name: "year",
+                title: "Year",
+              },
             ],
-            "colCount": 2
+            colCount: 2,
           },
           {
-            "type": "panel",
-            "name": "questionsToFemale",
-            "visible": false,
-            "visibleIf": "{sex} = 'female'",
-            "title": "For Female Patients",
-            "elements": [
+            type: "panel",
+            name: "questionsToFemale",
+            visible: false,
+            visibleIf: "{sex} = 'female'",
+            title: "For Female Patients",
+            elements: [
               {
-                "type": "radiogroup",
-                "name": "abnormalPapSmear",
-                "title": "Have you ever had an abnormal Pap smear?",
-                "isRequired": true,
-                "choices": [
-                  "Unknown",
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "abnormalPapSmear",
+                title: "Have you ever had an abnormal Pap smear?",
+                isRequired: true,
+                choices: ["Unknown", "No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "radiogroup",
-                "name": "menopause",
-                "title": "Have you experienced menopause or had a hysterectomy?",
-                "isRequired": true,
-                "choices": [
-                  "No",
-                  "Yes"
-                ],
-                "colCount": 0
+                type: "radiogroup",
+                name: "menopause",
+                title: "Have you experienced menopause or had a hysterectomy?",
+                isRequired: true,
+                choices: ["No", "Yes"],
+                colCount: 0,
               },
               {
-                "type": "panel",
-                "name": "panelNoMenopause",
-                "visible": false,
-                "visibleIf": "{menopause} = 'No'",
-                "elements": [
+                type: "panel",
+                name: "panelNoMenopause",
+                visible: false,
+                visibleIf: "{menopause} = 'No'",
+                elements: [
                   {
-                    "type": "radiogroup",
-                    "name": "concernedAboutMenstrualPeriods",
-                    "title": "Are you concerned about your menstrual periods?",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
+                    type: "radiogroup",
+                    name: "concernedAboutMenstrualPeriods",
+                    title: "Are you concerned about your menstrual periods?",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
                   },
                   {
-                    "type": "radiogroup",
-                    "name": "pregnant",
-                    "title": "Might you be pregnant at this time?",
-                    "isRequired": true,
-                    "choices": [
-                      "No",
-                      "Yes"
-                    ],
-                    "colCount": 0
+                    type: "radiogroup",
+                    name: "pregnant",
+                    title: "Might you be pregnant at this time?",
+                    isRequired: true,
+                    choices: ["No", "Yes"],
+                    colCount: 0,
                   },
                   {
-                    "type": "text",
-                    "name": "lastMenstrualPeriod",
-                    "title": "Date of onset of your last menstrual period:",
-                    "inputType": "date"
+                    type: "text",
+                    name: "lastMenstrualPeriod",
+                    title: "Date of onset of your last menstrual period:",
+                    inputType: "date",
                   },
                   {
-                    "type": "panel",
-                    "name": "panelPapSmearExam",
-                    "elements": [
+                    type: "panel",
+                    name: "panelPapSmearExam",
+                    elements: [
                       {
-                        "type": "radiogroup",
-                        "name": "papSmearExam",
-                        "title": "Have you ever done Pap smear and pelvic exam:",
-                        "isRequired": true,
-                        "choices": [
-                          "No",
-                          "Yes"
-                        ],
-                        "colCount": 0
+                        type: "radiogroup",
+                        name: "papSmearExam",
+                        title: "Have you ever done Pap smear and pelvic exam:",
+                        isRequired: true,
+                        choices: ["No", "Yes"],
+                        colCount: 0,
                       },
                       {
-                        "type": "multipletext",
-                        "name": "papSmearExamDate",
-                        "visible": false,
-                        "visibleIf": "{papSmearExam} = 'Yes'",
-                        "title": "Approximate date of your last Pap smear and pelvic exam:",
-                        "isRequired": true,
-                        "items": [
+                        type: "multipletext",
+                        name: "papSmearExamDate",
+                        visible: false,
+                        visibleIf: "{papSmearExam} = 'Yes'",
+                        title:
+                          "Approximate date of your last Pap smear and pelvic exam:",
+                        isRequired: true,
+                        items: [
                           {
-                            "name": "mo",
-                            "title": "Month"
+                            name: "mo",
+                            title: "Month",
                           },
                           {
-                            "name": "year",
-                            "title": "Year"
-                          }
+                            name: "year",
+                            title: "Year",
+                          },
                         ],
-                        "colCount": 2
+                        colCount: 2,
                       },
                       {
-                        "type": "radiogroup",
-                        "name": "mammogram",
-                        "title": "Have you ever done mammogram:",
-                        "isRequired": true,
-                        "choices": [
-                          "No",
-                          "Yes"
-                        ],
-                        "colCount": 0
+                        type: "radiogroup",
+                        name: "mammogram",
+                        title: "Have you ever done mammogram:",
+                        isRequired: true,
+                        choices: ["No", "Yes"],
+                        colCount: 0,
                       },
                       {
-                        "type": "multipletext",
-                        "name": "mammogramDate",
-                        "visible": false,
-                        "visibleIf": "{mammogram} = 'Yes'",
-                        "title": "Approximate date of your last mammogram:",
-                        "isRequired": true,
-                        "items": [
+                        type: "multipletext",
+                        name: "mammogramDate",
+                        visible: false,
+                        visibleIf: "{mammogram} = 'Yes'",
+                        title: "Approximate date of your last mammogram:",
+                        isRequired: true,
+                        items: [
                           {
-                            "name": "mo",
-                            "title": "Month"
+                            name: "mo",
+                            title: "Month",
                           },
                           {
-                            "name": "year",
-                            "title": "Year"
-                          }
+                            name: "year",
+                            title: "Year",
+                          },
                         ],
-                        "colCount": 2
-                      }
-                    ]
+                        colCount: 2,
+                      },
+                    ],
                   },
                   {
-                    "type": "panel",
-                    "name": "panelPregnancies",
-                    "title": "Number of:",
-                    "elements": [
+                    type: "panel",
+                    name: "panelPregnancies",
+                    title: "Number of:",
+                    elements: [
                       {
-                        "type": "text",
-                        "name": "pregnancies",
-                        "title": "Pregnancies:",
-                        "isRequired": true,
-                        "inputType": "number"
+                        type: "text",
+                        name: "pregnancies",
+                        title: "Pregnancies:",
+                        isRequired: true,
+                        inputType: "number",
                       },
                       {
-                        "type": "text",
-                        "name": "liveBirths",
-                        "startWithNewLine": false,
-                        "title": "Live Births:",
-                        "isRequired": true,
-                        "inputType": "number"
+                        type: "text",
+                        name: "liveBirths",
+                        startWithNewLine: false,
+                        title: "Live Births:",
+                        isRequired: true,
+                        inputType: "number",
                       },
                       {
-                        "type": "text",
-                        "name": "abortions",
-                        "startWithNewLine": false,
-                        "title": "Miscarriages/abortions:",
-                        "isRequired": true,
-                        "inputType": "number",
-                        "min": 0
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+                        type: "text",
+                        name: "abortions",
+                        startWithNewLine: false,
+                        title: "Miscarriages/abortions:",
+                        isRequired: true,
+                        inputType: "number",
+                        min: 0,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        "name": "selfCare",
-        "questionTitleLocation": "top",
-        "title": "Self-Care/Home Environment Assessment",
-        "elements": [
+        name: "selfCare",
+        questionTitleLocation: "top",
+        title: "Self-Care/Home Environment Assessment",
+        elements: [
           {
-            "type": "matrix",
-            "name": "performingActivities",
-            "title": "Do you have difficulty performing these activities by YOURSELF?",
-            "columns": [
-              "No",
-              "Yes"
-            ],
-            "rows": [
+            type: "matrix",
+            name: "performingActivities",
+            title:
+              "Do you have difficulty performing these activities by YOURSELF?",
+            columns: ["No", "Yes"],
+            rows: [
               "Eating",
               "Bathing",
               "Dressing",
               "Walking",
               "Using Toilet",
-              "Housekeeping"
+              "Housekeeping",
             ],
-            "isAllRowRequired": true
+            isAllRowRequired: true,
           },
           {
-            "type": "radiogroup",
-            "name": "specialDietary",
-            "title": "Do you have any special dietary needs?",
-            "isRequired": true,
-            "choices": [
-              "No",
-              "Yes"
-            ],
-            "colCount": 0
+            type: "radiogroup",
+            name: "specialDietary",
+            title: "Do you have any special dietary needs?",
+            isRequired: true,
+            choices: ["No", "Yes"],
+            colCount: 0,
           },
           {
-            "type": "comment",
-            "name": "specialDietaryDescription",
-            "visibleIf": "{specialDietary} = 'Yes'",
-            "title": "Please describe your special dietery:",
-            "isRequired": true
+            type: "comment",
+            name: "specialDietaryDescription",
+            visibleIf: "{specialDietary} = 'Yes'",
+            title: "Please describe your special dietery:",
+            isRequired: true,
           },
           {
-            "type": "radiogroup",
-            "name": "livingArrangement",
-            "title": "What is your current living arrangement?",
-            "isRequired": true,
-            "choices": [
-              "House",
-              "Apartment",
-              "Nursing Home"
-            ],
-            "showOtherItem": true,
-            "colCount": 0
+            type: "radiogroup",
+            name: "livingArrangement",
+            title: "What is your current living arrangement?",
+            isRequired: true,
+            choices: ["House", "Apartment", "Nursing Home"],
+            showOtherItem: true,
+            colCount: 0,
           },
           {
-            "type": "radiogroup",
-            "name": "liveWithWhom",
-            "title": "Do you live?",
-            "isRequired": true,
-            "choices": [
-              "Alone",
-              "With Spouse/Family",
-              "With others"
-            ],
-            "colCount": 0
+            type: "radiogroup",
+            name: "liveWithWhom",
+            title: "Do you live?",
+            isRequired: true,
+            choices: ["Alone", "With Spouse/Family", "With others"],
+            colCount: 0,
           },
           {
-            "type": "comment",
-            "name": "liveWithWhomDescription",
-            "visibleIf": "{liveWithWhom} = 'With others'",
-            "title": "Please describe with whom do you live:",
-            "isRequired": true
+            type: "comment",
+            name: "liveWithWhomDescription",
+            visibleIf: "{liveWithWhom} = 'With others'",
+            title: "Please describe with whom do you live:",
+            isRequired: true,
           },
           {
-            "type": "comment",
-            "name": "peopleProvidedAssistence",
-            "title": "List family or friends able to provide assistance with your homecare needs if you would ever require such assistance:",
-            "titleLocation": "top"
-          }
-        ]
+            type: "comment",
+            name: "peopleProvidedAssistence",
+            title:
+              "List family or friends able to provide assistance with your homecare needs if you would ever require such assistance:",
+            titleLocation: "top",
+          },
+        ],
       },
       {
-        "name": "educationalNeeds",
-        "title": "Educational Needs",
-        "elements": [
+        name: "educationalNeeds",
+        title: "Educational Needs",
+        elements: [
           {
-            "type": "checkbox",
-            "name": "interestedInTopics",
-            "title": "Are you interested in more information about a specific topic(s)?",
-            "choices": [
+            type: "checkbox",
+            name: "interestedInTopics",
+            title:
+              "Are you interested in more information about a specific topic(s)?",
+            choices: [
               "How to stop smoking",
               "Exercise",
               "Stress",
@@ -1674,15 +1523,16 @@ export const medical = {
               "Violent & abusive behavior",
               "Living wills",
               "Diabetes",
-              "Cancer screening   "
+              "Cancer screening   ",
             ],
-            "showOtherItem": true,
-            "colCount": 3
-          }
-        ]
-      }
+            showOtherItem: true,
+            colCount: 3,
+          },
+        ],
+      },
     ],
-    "showQuestionNumbers": "off",
-    "questionErrorLocation": "bottom",
-    "showProgressBar": "top"
-  }
+    showQuestionNumbers: "off",
+    questionErrorLocation: "bottom",
+    showProgressBar: "top",
+  },
+};

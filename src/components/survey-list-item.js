@@ -1,12 +1,19 @@
-import { slugify } from "@/utils";
 import Link from "next/link";
 
 export const SurveyListItem = ({ survey }) => {
-  console.log(survey);
   return (
     <div>
-      <p>{survey.title}</p>
-      <Link href={`/form/${slugify(survey.title)}`}>Fill out form</Link>
+      <p>{survey.survey.title}</p>
+      <ul>
+        <li>
+          <Link href={`/form/${survey.slug}`}>Fill out form</Link>
+        </li>
+        {survey.results.length > 0 && (
+          <li>
+            <Link href={`/results/${survey.slug}`}>Results</Link>
+          </li>
+        )}
+      </ul>
     </div>
   );
 };

@@ -13,33 +13,33 @@ export const job = {
       {
         name: "page1",
         elements: [
-          // {
-          //   type: "panel",
-          //   name: "personal-info",
-          //   title: "Personal Information",
-          //   elements: [
-          //     {
-          //       type: "text",
-          //       name: "first-name",
-          //       title: "First name",
-          //       isRequired: true,
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "last-name",
-          //       startWithNewLine: false,
-          //       title: "Last name",
-          //       isRequired: true,
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "birthdate",
-          //       title: "Date of birth",
-          //       isRequired: true,
-          //       inputType: "date",
-          //     },
-          //   ],
-          // },
+          {
+            type: "panel",
+            name: "personal-info",
+            title: "Personal Information",
+            elements: [
+              {
+                type: "text",
+                name: "first-name",
+                title: "First name",
+                isRequired: true,
+              },
+              {
+                type: "text",
+                name: "last-name",
+                startWithNewLine: false,
+                title: "Last name",
+                isRequired: true,
+              },
+              {
+                type: "text",
+                name: "birthdate",
+                title: "Date of birth",
+                isRequired: true,
+                inputType: "date",
+              },
+            ],
+          },
           // {
           //   type: "panel",
           //   name: "location",

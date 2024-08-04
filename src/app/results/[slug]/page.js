@@ -13,7 +13,9 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  return surveys.map((x) => ({ slug: x.slug }));
+  return surveys
+    .filter((x) => x.results.length > 0)
+    .map((x) => ({ slug: x.slug }));
 }
 
 export default function Page({ params: { slug } }) {

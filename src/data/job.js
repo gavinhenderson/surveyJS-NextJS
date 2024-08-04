@@ -84,53 +84,53 @@ export const job = {
           //   inputType: "email",
           //   placeholder: "mail@example.com",
           // },
-          {
-            type: "text",
-            name: "salary",
-            title: "Expected salary (in US dollars)",
-            validators: [
-              {
-                type: "numeric",
-              },
-            ],
-            inputType: "number",
-          },
-          {
-            type: "dropdown",
-            name: "position",
-            title: "What position are you applying for?",
-            choices: [
-              {
-                value: "frontend",
-                text: "Frontend Developer",
-              },
-              {
-                value: "backend",
-                text: "Backend Developer",
-              },
-              {
-                value: "fullstack",
-                text: "Full-Stack Developer",
-              },
-              {
-                value: "intern",
-                text: "Intern",
-              },
-            ],
-          },
-          {
-            type: "text",
-            name: "start-date",
-            title: "Date available to start work",
-            isRequired: true,
-            inputType: "date",
-          },
-          {
-            type: "file",
-            name: "resume",
-            title: "Upload your resume",
-            acceptedTypes: "application/pdf",
-          },
+          // {
+          //   type: "text",
+          //   name: "salary",
+          //   title: "Expected salary (in US dollars)",
+          //   validators: [
+          //     {
+          //       type: "numeric",
+          //     },
+          //   ],
+          //   inputType: "number",
+          // },
+          // {
+          //   type: "dropdown",
+          //   name: "position",
+          //   title: "What position are you applying for?",
+          //   choices: [
+          //     {
+          //       value: "frontend",
+          //       text: "Frontend Developer",
+          //     },
+          //     {
+          //       value: "backend",
+          //       text: "Backend Developer",
+          //     },
+          //     {
+          //       value: "fullstack",
+          //       text: "Full-Stack Developer",
+          //     },
+          //     {
+          //       value: "intern",
+          //       text: "Intern",
+          //     },
+          //   ],
+          // },
+          // {
+          //   type: "text",
+          //   name: "start-date",
+          //   title: "Date available to start work",
+          //   isRequired: true,
+          //   inputType: "date",
+          // },
+          // {
+          //   type: "file",
+          //   name: "resume",
+          //   title: "Upload your resume",
+          //   acceptedTypes: "application/pdf",
+          // },
         ],
       },
     ],

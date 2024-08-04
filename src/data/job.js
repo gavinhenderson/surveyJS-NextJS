@@ -95,29 +95,29 @@ export const job = {
             ],
             inputType: "number",
           },
-          // {
-          //   type: "dropdown",
-          //   name: "position",
-          //   title: "What position are you applying for?",
-          //   choices: [
-          //     {
-          //       value: "frontend",
-          //       text: "Frontend Developer",
-          //     },
-          //     {
-          //       value: "backend",
-          //       text: "Backend Developer",
-          //     },
-          //     {
-          //       value: "fullstack",
-          //       text: "Full-Stack Developer",
-          //     },
-          //     {
-          //       value: "intern",
-          //       text: "Intern",
-          //     },
-          //   ],
-          // },
+          {
+            type: "dropdown",
+            name: "position",
+            title: "What position are you applying for?",
+            choices: [
+              {
+                value: "frontend",
+                text: "Frontend Developer",
+              },
+              {
+                value: "backend",
+                text: "Backend Developer",
+              },
+              {
+                value: "fullstack",
+                text: "Full-Stack Developer",
+              },
+              {
+                value: "intern",
+                text: "Intern",
+              },
+            ],
+          },
           // {
           //   type: "text",
           //   name: "start-date",

@@ -5,10 +5,6 @@ export const job = {
     title: "Job Application Form",
     description:
       "Thank you for your interest in working with us. Please fill out the form and send your application. We will get back to you within a week.",
-    logo: "https://api.surveyjs.io/private/Surveys/files?name=b4b071f2-c1f1-4887-a1de-8323825141b6",
-    logoHeight: "100px",
-    logoFit: "cover",
-    logoPosition: "right",
     pages: [
       {
         name: "page1",

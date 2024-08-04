@@ -37,38 +37,6 @@ export const pizza = {
                 imageHeight: 80,
                 imageWidth: 180,
               },
-              {
-                type: "dropdown",
-                name: "size_n",
-                minWidth: "220px",
-                title: "Size",
-                titleLocation: "left",
-                defaultValue: 1,
-                choices: [
-                  {
-                    value: 0,
-                    text: "Small",
-                  },
-                  {
-                    value: 1,
-                    text: "Medium",
-                  },
-                  {
-                    value: 2,
-                    text: "Large",
-                  },
-                ],
-                allowClear: false,
-              },
-              {
-                type: "dropdown",
-                name: "qty_n",
-                minWidth: "220px",
-                startWithNewLine: false,
-                title: "Qty",
-                titleLocation: "left",
-                choices: [1, 2, 3, 4, 5],
-              },
             ],
           },
           {
@@ -98,38 +66,6 @@ export const pizza = {
                 imageHeight: 80,
                 imageWidth: 180,
               },
-              {
-                type: "dropdown",
-                name: "size_p",
-                minWidth: "220px",
-                title: "Size",
-                titleLocation: "left",
-                defaultValue: 1,
-                choices: [
-                  {
-                    value: 0,
-                    text: "Small",
-                  },
-                  {
-                    value: 1,
-                    text: "Medium",
-                  },
-                  {
-                    value: 2,
-                    text: "Large",
-                  },
-                ],
-                allowClear: false,
-              },
-              {
-                type: "dropdown",
-                name: "qty_p",
-                minWidth: "220px",
-                startWithNewLine: false,
-                title: "Qty",
-                titleLocation: "left",
-                choices: [1, 2, 3, 4, 5],
-              },
             ],
           },
           {
@@ -158,38 +94,6 @@ export const pizza = {
                 imageFit: "cover",
                 imageHeight: 80,
                 imageWidth: 180,
-              },
-              {
-                type: "dropdown",
-                name: "size_m",
-                minWidth: "220px",
-                title: "Size",
-                titleLocation: "left",
-                defaultValue: 1,
-                choices: [
-                  {
-                    value: 0,
-                    text: "Small",
-                  },
-                  {
-                    value: 1,
-                    text: "Medium",
-                  },
-                  {
-                    value: 2,
-                    text: "Large",
-                  },
-                ],
-                allowClear: false,
-              },
-              {
-                type: "dropdown",
-                name: "qty_m",
-                minWidth: "220px",
-                startWithNewLine: false,
-                title: "Qty",
-                titleLocation: "left",
-                choices: [1, 2, 3, 4, 5],
               },
             ],
           },

@@ -40,43 +40,6 @@ export const job = {
               },
             ],
           },
-          // {
-          //   type: "panel",
-          //   name: "location",
-          //   title: "Your Location",
-          //   elements: [
-          //     {
-          //       type: "dropdown",
-          //       name: "country",
-          //       title: "Country",
-          //       choicesByUrl: {
-          //         url: "https://surveyjs.io/api/CountriesExample",
-          //       },
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "city",
-          //       title: "City/Town",
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "zip",
-          //       startWithNewLine: false,
-          //       title: "Zip code",
-          //       validators: [
-          //         {
-          //           type: "numeric",
-          //         },
-          //       ],
-          //       inputType: "number",
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "address",
-          //       title: "Street address",
-          //     },
-          //   ],
-          // },
           {
             type: "text",
             name: "email",
@@ -96,41 +59,18 @@ export const job = {
             inputType: "number",
           },
           {
-            type: "dropdown",
-            name: "position",
-            title: "What position are you applying for?",
-            choices: [
-              {
-                value: "frontend",
-                text: "Frontend Developer",
-              },
-              {
-                value: "backend",
-                text: "Backend Developer",
-              },
-              {
-                value: "fullstack",
-                text: "Full-Stack Developer",
-              },
-              {
-                value: "intern",
-                text: "Intern",
-              },
-            ],
+            type: "text",
+            name: "start-date",
+            title: "Date available to start work",
+            isRequired: true,
+            inputType: "date",
           },
-          // {
-          //   type: "text",
-          //   name: "start-date",
-          //   title: "Date available to start work",
-          //   isRequired: true,
-          //   inputType: "date",
-          // },
-          // {
-          //   type: "file",
-          //   name: "resume",
-          //   title: "Upload your resume",
-          //   acceptedTypes: "application/pdf",
-          // },
+          {
+            type: "file",
+            name: "resume",
+            title: "Upload your resume",
+            acceptedTypes: "application/pdf",
+          },
         ],
       },
     ],

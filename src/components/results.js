@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { VisualizationPanel } from "survey-analytics";
 import { Model } from "survey-core";
 
 export default function Results({ surveyData }) {
@@ -9,17 +8,21 @@ export default function Results({ surveyData }) {
   const [vizPanel, setVizPanel] = useState(null);
 
   useEffect(() => {
-    const survey = new Model(surveyData.survey);
-    setSurvey(survey);
+    (async () => {
+      const survey = new Model(surveyData.survey);
+      setSurvey(survey);
 
-    const currentPanel = new VisualizationPanel(
-      survey.getAllQuestions(),
-      surveyData.results,
-      {
-        allowHideQuestions: false,
-      }
-    );
-    setVizPanel(currentPanel);
+      const { VisualizationPanel } = await import("survey-analytics");
+
+      const currentPanel = new VisualizationPanel(
+        survey.getAllQuestions(),
+        surveyData.results,
+        {
+          allowHideQuestions: false,
+        }
+      );
+      setVizPanel(currentPanel);
+    })();
   }, [surveyData]);
 
   useEffect(() => {

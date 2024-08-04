@@ -12,6 +12,10 @@ export async function generateMetadata({ params }) {
   };
 }
 
+export async function generateStaticParams() {
+  return survey.map((x) => ({ slug: x.slug }));
+}
+
 export default function Page({ params: { slug } }) {
   const survey = surveys.find((x) => x.slug === slug);
 

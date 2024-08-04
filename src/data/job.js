@@ -40,43 +40,43 @@ export const job = {
               },
             ],
           },
-          // {
-          //   type: "panel",
-          //   name: "location",
-          //   title: "Your Location",
-          //   elements: [
-          //     {
-          //       type: "dropdown",
-          //       name: "country",
-          //       title: "Country",
-          //       choicesByUrl: {
-          //         url: "https://surveyjs.io/api/CountriesExample",
-          //       },
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "city",
-          //       title: "City/Town",
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "zip",
-          //       startWithNewLine: false,
-          //       title: "Zip code",
-          //       validators: [
-          //         {
-          //           type: "numeric",
-          //         },
-          //       ],
-          //       inputType: "number",
-          //     },
-          //     {
-          //       type: "text",
-          //       name: "address",
-          //       title: "Street address",
-          //     },
-          //   ],
-          // },
+          {
+            type: "panel",
+            name: "location",
+            title: "Your Location",
+            elements: [
+              {
+                type: "dropdown",
+                name: "country",
+                title: "Country",
+                choicesByUrl: {
+                  url: "https://surveyjs.io/api/CountriesExample",
+                },
+              },
+              {
+                type: "text",
+                name: "city",
+                title: "City/Town",
+              },
+              {
+                type: "text",
+                name: "zip",
+                startWithNewLine: false,
+                title: "Zip code",
+                validators: [
+                  {
+                    type: "numeric",
+                  },
+                ],
+                inputType: "number",
+              },
+              {
+                type: "text",
+                name: "address",
+                title: "Street address",
+              },
+            ],
+          },
           // {
           //   type: "text",
           //   name: "email",
